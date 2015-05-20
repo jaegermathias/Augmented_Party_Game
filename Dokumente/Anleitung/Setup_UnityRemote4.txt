@@ -1,0 +1,26 @@
+Unity Remote 4 unterstützt den Entwicklungsprozess ungemein, indem es 
+den Build und das Installieren von .apk für einfache Tests erspart.
+Die Berechnung findet weiterhin auf dem PC statt, Sensordaten werden
+jedoch auch zurück in den Editor übertragen.
+
+Die Einstellungen in Unity sind soweit schon vorgenommen.
+Sollte es Probleme geben konnte bei mir sowohl der Neustart von Unity,
+als auch der Neustart des Tabets Abhilfe schaffen.
+
+Die Geräte-Erkennung muss für jeden Rechner erfolgen. Vorgehen ist hier:
+1. http://docs.unity3d.com/Manual/android-sdksetup.html
+
+Hat das geklappt, dann die App "Unity Remote 4" aus dem PlayStore laden.
+Die Beschreibung für Remote 4 ist hier:
+2. http://docs.unity3d.com/Manual/UnityRemote4Android.html
+
+Unbedingt darauf achten, dass euer Android-Gerät im Entwicklermodus ist!
+Unbedingt darauf achten, dass der USB-Debugging-Modus aktiv ist!
+Unbedingt darauf achten, dass das Android-Gerät als Mediengerät 
+angeschlossen ist, und nicht als Kamera!
+
+
+
+
+
+
