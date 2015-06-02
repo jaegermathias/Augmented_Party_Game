@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{5B8323FA-B8CD-895B-80E9-F5A06547125E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\INyARMarkerSystemConfig.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\INyARMarkerSystemSquareDetect.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\INyARSingleCameraSystemObserver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\NyARMarkerSystem.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\NyARMarkerSystemConfig.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\NyARSensor.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\NyARSingleCameraSystem.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\ARMarkerList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\ARMarkerSortList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\ARPlayCardList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\MarkerInfoARMarker.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\MarkerInfoNyId.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\MultiResolutionPattProvider.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\NyIdList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\SquareStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\TMarkerData.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\TrackingList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.markersystem\cs\markersystem\utils\VertexSortTable.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\mklib\ARTKMarkerTable.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\mklib\ASyncIdMarkerTable.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\mklib\CardDetect.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\mklib\RawbitSerialIdTable.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\reality\nyartk\NyARReality.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\reality\nyartk\NyARRealityTarget.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\reality\nyartk\NyARRealityTargetList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\reality\nyartk\NyARRealityTargetPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\realitysource\nyartk\NyARRealitySource.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\realitysource\nyartk\NyARRealitySource_Reference.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\sampler\lrlabel\LowResolutionLabelingSampler.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\sampler\lrlabel\LowResolutionLabelingSamplerOut.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\INyARVectorReader.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NegativeSqRoberts.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARRectTargetList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTarget.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTargetList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTargetPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTracker.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTrackerSource.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARTrackerSource_Reference.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARVectorReader_Base.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\NyARVectorReader_INT1D_GRAY_8.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARContourTargetStatus.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARContourTargetStatusPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARNewTargetStatus.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARNewTargetStatusPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARRectTargetStatus.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARRectTargetStatusPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\nyartk\status\NyARTargetStatus.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\utils\LineBaseVertexDetector.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\utils\VecLinearCoordinates.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\tracker\utils\VecLinearCoordinatesOperator.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\utils\INyARGsRasterGraphics.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src.rpf\cs\rpf\utils\NyARGsRasterGraphicsFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\NyARException.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\INyARDisposable.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\NyARCode.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\NyARMat.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\NyARMatPca.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\NyARVec.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\NyARVersion.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\analyzer\histogram\INyARHistogramAnalyzer_Threshold.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\analyzer\histogram\NyARHistogramAnalyzer_DiscriminantThreshold.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\analyzer\histogram\NyARHistogramAnalyzer_KittlerThreshold.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\analyzer\histogram\NyARHistogramAnalyzer_SlidePTile.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\NyARLabelInfo.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\NyARLabelOverlapChecker.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\artoolkit\NyARLabelingImage.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\artoolkit\NyARLabelingLabel.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\artoolkit\NyARLabelingLabelStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\artoolkit\NyARLabeling_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\rlelabeling\NyARLabeling_Rle.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\rlelabeling\NyARRleLabelFragmentInfo.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\labeling\rlelabeling\NyARRleLabelFragmentInfoPtrStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\INyARMatchPatt.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\NyARMatchPattDeviationBlackWhiteData.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\NyARMatchPattDeviationColorData.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\NyARMatchPattResult.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\NyARMatchPatt_BlackWhite.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\match\NyARMatchPatt_Color_WITHOUT_PCA.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\INyARCameraDistortionFactor.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARCameraDistortionFactor.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARCameraDistortionFactorV2.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARCameraDistortionFactorV4.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARFrustum.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARObserv2IdealMap.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARParam.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\param\NyARPerspectiveProjectionMatrix.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pca2d\INyARPca2d.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pca2d\NyARPca2d_MatrixPCA.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pca2d\NyARPca2d_MatrixPCA_O2.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pickup\INyARColorPatt.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pickup\NyARColorPatt_Base.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pickup\NyARColorPatt_O3.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pickup\NyARColorPatt_Perspective.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pickup\NyARColorPatt_PseudoAffine.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pixeldriver\INyARGsPixelDriver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pixeldriver\INyARRgbPixelDriver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pixeldriver\NyARGsPixelDriverFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\pixeldriver\NyARRgbPixelDriverFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\INyARGrayscaleRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\INyARRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\NyARBinRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\NyARGrayscaleRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\NyARHsvRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\NyARRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\NyARRaster_BasicClass.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\rgb\INyARRgbRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\rgb\NyARRgbRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\raster\rgb\NyARRgbRaster_BasicClass.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterdriver\INyARHistogramFromRaster.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterdriver\INyARPerspectiveCopy.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterdriver\NyARHistogramFromRasterFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterdriver\NyARPerspectiveCopyFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterdriver\NyARPerspectiveCopy_Base.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\NyARRasterFilter_Rgb2Hsv.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsCustomToneTableFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsEqualizeHistFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsGaussianSmoothFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsReverseFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsRobertsFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\INyARGsToneTableFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\gs\NyARGsFilterFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\INyARRgb2GsFilter.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\INyARRgb2GsFilterArtkTh.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\INyARRgb2GsFilterRgbAve.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\INyARRgb2GsFilterRgbCube.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\INyARRgb2GsFilterYCbCr.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\NyARRgb2GsFilterArtkThFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\rasterfilter\rgb2gs\NyARRgb2GsFilterFactory.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\INyARSquareContourDetectorHandler.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARContourPickup.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARContourPickup_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARCoord2Linear.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARCoord2SquareVertexIndexes.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARSquare.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARSquareContourDetector.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARSquareContourDetector_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARSquareContourDetector_Rle.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\squaredetect\NyARSquareStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\INyARTransMat.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\NyARRectOffset.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\NyARTransMat.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\NyARTransMatResult.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\NyARTransMatResultParam.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\NyARTransMat_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\optimize\NyARPartialDifferentiationOptimize.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\optimize\artoolkit\INyARRotMatrixOptimize.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\optimize\artoolkit\NyARRotMatrixOptimize_O2.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\rotmatrix\NyARRotMatrix.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\rotmatrix\NyARRotMatrix_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\rotmatrix\NyARRotMatrix_ARToolKit_O2.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\rotmatrix\NyARRotVector.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\rotmatrix\NyARRotVectorV2.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\solver\INyARTransportVectorSolver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\solver\NyARTransportVectorSolver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\transmat\solver\NyARTransportVectorSolver_ARToolKit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARBufferType.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARDoublePoint2d.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARDoublePoint3d.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARHistogram.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARIntCoordinates.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARIntPoint2d.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARIntRect.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARIntSize.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARLinear.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARQuaternion.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\NyARVecLinear2d.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\matrix\INyARDoubleMatrix.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\matrix\NyARDoubleMatrix22.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\matrix\NyARDoubleMatrix33.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\matrix\NyARDoubleMatrix34.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\matrix\NyARDoubleMatrix44.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\stack\NyARIntPointStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\stack\NyARIntRectStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\stack\NyARObjectStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\types\stack\NyARPointerStack.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\ByteBufferedInputStream.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARDistMap.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyAREquationSolver.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARLCGsRandomizer.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARLinkList.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARManagedObject.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARManagedObjectPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARMath.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARObjectPool.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARPerspectiveParamGenerator.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARPerspectiveParamGenerator_O1.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARPerspectiveParamGenerator_Reference.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\core\utils\NyARSystemOfLinearEquationsProcessor.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\detector\NyARDetectMarker.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\detector\NyARSingleDetectMarker.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\NyIdMarkerParam.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\NyIdMarkerPattern.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\NyIdMarkerPickup.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\INyIdMarkerData.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\INyIdMarkerDataEncoder.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\NyIdMarkerDataEncoder_RawBit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\NyIdMarkerDataEncoder_RawBitId.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\NyIdMarkerData_RawBit.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\nyidmarker\data\NyIdMarkerData_RawBitId.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\processor\SingleARMarkerProcesser.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\processor\SingleNyIdMarkerProcesser.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\psarplaycard\PsARPlayCardPickup.cs" />
+     <Compile Include="Assets\NyARToolkitCS\src\cs\utils.cs\ArrayUtils.cs" />
+     <Compile Include="Assets\NyARUnityUtils\NyARUnityMarkerSystem.cs" />
+     <Compile Include="Assets\NyARUnityUtils\NyARUnityRaster.cs" />
+     <Compile Include="Assets\NyARUnityUtils\NyARUnitySensor.cs" />
+     <Compile Include="Assets\NyARUnityUtils\NyARUnityUtil.cs" />
+     <Compile Include="Assets\NyARUnityUtils\NyARUnityWebCam.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\EventSystemChecker.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\ReturnToMainMenu.cs" />
+     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
+     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\sample.webplayer\SimpleLiteWeb\SimpleLiteWebBehaviour.cs" />
+     <Compile Include="Assets\sample.webplayer\WebCamTest\WebcamTestBehaviourScript.cs" />
+     <Compile Include="Assets\sample\ImagePickup\ImagePickup.cs" />
+     <Compile Include="Assets\sample\JpegFile\ARJpegBehaviour.cs" />
+     <Compile Include="Assets\sample\MarkerPlane\MarkerPlaneBehavior.cs" />
+     <Compile Include="Assets\sample\SimpleLite\ARCameraBehaviour.cs" />
+     <Compile Include="Assets\sample\SimpleLiteM\SimpleLiteMBehaviour.cs" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+     <None Include="Assets\Data\NyIdMarker.txt" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{67DDCF1D-70E4-CC04-FEC8-7F3F43231130}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
