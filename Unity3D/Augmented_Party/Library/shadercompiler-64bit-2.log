@@ -1,56 +1,6 @@
-Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-5860
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-2-4188
 Cmd: getPlatforms
-Cmd: compileSnippet
-  api=9 type=0 insize=7845 outsize=8024 kw= ok=1
-Cmd: compileSnippet
-  api=5 type=0 insize=3272 outsize=1291 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=3270 outsize=1266 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=3277 outsize=2226 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=1245 outsize=1598 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19790 outsize=1171 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19796 outsize=4202 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19799 outsize=5828 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19778 outsize=781 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19794 outsize=1158 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19781 outsize=2238 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19792 outsize=2150 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19788 outsize=912 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19798 outsize=1227 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19791 outsize=1255 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19798 outsize=1308 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19786 outsize=3885 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19795 outsize=3196 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=1 insize=19782 outsize=7 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19787 outsize=1488 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=1 insize=19782 outsize=7 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=1 insize=19795 outsize=7 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=1 insize=19804 outsize=7 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=0 insize=19785 outsize=2238 kw= ok=1
-Cmd: compileSnippet
-  api=9 type=1 insize=19801 outsize=7 kw= ok=1
 Unhandled exception: Readfile from pipe failed. GLE=Die Pipe wurde beendet.
 
 
