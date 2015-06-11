@@ -1,3 +1,4 @@
+
 /*==============================================================================
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
@@ -15,15 +16,22 @@ namespace Vuforia
                                                 ITrackableEventHandler
     {
         #region PRIVATE_MEMBER_VARIABLES
- 
+
         private TrackableBehaviour mTrackableBehaviour;
-    
+
         #endregion // PRIVATE_MEMBER_VARIABLES
 
+        #region PUBLIC_MEMBER_VARIABLES
+
+        public static Vector3 Pos;
+        public Vector3 newPos;
+        public Vector3 toleranz;
+
+        #endregion // PUBLIC_MEMBER_VARIABLES
 
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
-    
+
         void Start()
         {
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -31,6 +39,8 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
+            Pos = new Vector3(0, 0, 0);
+            toleranz = new Vector3(0, 0, 0);
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -59,6 +69,11 @@ namespace Vuforia
             }
         }
 
+        public Vector3 getPosition
+        {
+            get { return Pos; }
+        }
+
         #endregion // PUBLIC_METHODS
 
 
@@ -82,8 +97,22 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
+            newPos = transform.position;
+            //Save Position for PlaneSkript:
+            //X
+            var xtest = (newPos.x > Pos.x + toleranz.x) || (newPos.x > Pos.x - toleranz.x) || (newPos.x < Pos.x + toleranz.x) || (newPos.x < Pos.x - toleranz.x);
+            //Y
+            var ytest = (newPos.y > Pos.y + toleranz.y) || (newPos.y > Pos.y - toleranz.y) || (newPos.y < Pos.y + toleranz.y) || (newPos.y < Pos.y - toleranz.y);
+            //Z
+            var ztest = (newPos.z > Pos.z + toleranz.z) || (newPos.z > Pos.z - toleranz.z) || (newPos.z < Pos.z + toleranz.z) || (newPos.z < Pos.z - toleranz.z);
 
-            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+            if (xtest || ytest || ztest)
+            {
+                Pos = newPos;
+                //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+                //Debug.Log(mTrackableBehaviour.TrackableName + " Positioon " + Pos.x + " , " + Pos.z);
+            }
+
         }
 
 
@@ -105,8 +134,11 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+
         }
 
         #endregion // PRIVATE_METHODS
     }
 }
+
+
