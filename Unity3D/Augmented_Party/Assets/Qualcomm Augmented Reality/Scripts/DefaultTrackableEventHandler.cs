@@ -26,7 +26,8 @@ namespace Vuforia
         public static Vector3 Pos;
         public Vector3 newPos;
         public Vector3 toleranz;
-
+        public GameObject Spielfeld;
+        
         #endregion // PUBLIC_MEMBER_VARIABLES
 
 
@@ -109,6 +110,11 @@ namespace Vuforia
             if (xtest || ytest || ztest)
             {
                 Pos = newPos;
+                MarkerBehaviour marker = (MarkerBehaviour)mTrackableBehaviour;
+                //Debug.Log("Trackable " + marker.Marker.ID + " found");
+           
+                
+                Spielfeld.SendMessage("neuePos", new Vector4(Pos.x, Pos.y, Pos.z, marker.Marker.ID));
                 //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
                 //Debug.Log(mTrackableBehaviour.TrackableName + " Positioon " + Pos.x + " , " + Pos.z);
             }
@@ -133,7 +139,7 @@ namespace Vuforia
                 component.enabled = false;
             }
 
-            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 
         }
 
