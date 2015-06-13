@@ -90,6 +90,10 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 			Debug.Log("Restart");    
                 //mActiveMaterials.Add(m_TeapotMaterials[2]);
                 break;
+		case "Select":
+			Debug.Log("Select");    
+			//mActiveMaterials.Add(m_TeapotMaterials[2]);
+			break;
         }
 
         // Apply the new material:
