@@ -1,0 +1,4 @@
+Photoshop:
+- Korrekturen: Gradationskurve, Tonwertspreizung, Dynamik
+- Ebenen ineinanderkopieren / multiplizieren / linear nachbelichten
+- Strukturierungsfilter: Risse
