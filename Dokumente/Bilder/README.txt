@@ -1,0 +1,1 @@
+Diese Bilder dienen bereits als ImageTargets und dürfen für keine weiteren verwendet werden!
