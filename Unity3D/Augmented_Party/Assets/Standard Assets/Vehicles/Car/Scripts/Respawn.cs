@@ -14,7 +14,7 @@ public class Respawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("Car Pos y: " + transform.position.y);
+//		Debug.Log ("Car Pos y: " + transform.position.y);
 		if(transform.position.y < -10f && lives > 0) {
 			transform.position = pos;
 			lives--;

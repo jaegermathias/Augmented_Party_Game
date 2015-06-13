@@ -234,7 +234,7 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: 42c36003bcd3c485aa697d4865989e9a, type: 3}
+    m_Font: {fileID: 12800000, guid: 1de1635dffdfe4c5ea594458f083a383, type: 3}
     m_FontSize: 0
     m_FontStyle: 0
     m_Alignment: 0
@@ -1252,7 +1252,7 @@ MonoBehaviour:
     m_StretchHeight: 0
   - m_Name: AboutScreenTitle
     m_Normal:
-      m_Background: {fileID: 2800000, guid: 22f1a284fe0ea4751875027d6afdc76c, type: 3}
+      m_Background: {fileID: 2800000, guid: b73e38e0d9ba548cbbb04cce503adae8, type: 3}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}

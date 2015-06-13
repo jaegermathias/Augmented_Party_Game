@@ -1,13 +1,12 @@
-﻿The Image Targets sample shows how to detect an image target and render a simple 3D object on top of it.
+﻿The Virtual Buttons sample shows how the developer can define rectangular regions on image targets that trigger an event when touched or occluded in the camera view. The sample renders a 3D object that changes color when one of the virtual buttons is triggered.
 
 Key Functionality
-- Simultaneous detection and tracking of multiple targets
-- Load and activate multiple device databases
-- Activate Extended Tracking
+- Button occlusion event handling
+- Activation of multiple virtual buttons
 - Manage camera functions: flash and continuous autofocus
 
 Targets
-https://developer.vuforia.com/sites/default/files/sample-apps/targets/imagetargets_targets.pdf
+https://developer.vuforia.com/sites/default/files/sample-apps/targets/wood.pdf
 
 Instructions
 - Point camera at target to view
