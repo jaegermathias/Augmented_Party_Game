@@ -9,7 +9,6 @@ public class Respawn : MonoBehaviour {
 	int lives;
 	void Start () {
 		pos = new Vector3 (1, 1, 1);
-		rotation = new Quaternion();
 		lives = 4;
 	}
 	
