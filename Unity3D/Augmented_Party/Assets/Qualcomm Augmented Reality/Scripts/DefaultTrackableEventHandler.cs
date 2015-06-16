@@ -97,6 +97,11 @@ namespace Vuforia
             {
                 component.enabled = true;
             }
+
+            UpdatePos();
+        }
+         private void UpdatePos()
+        {
             newPos = transform.position;
             //Save Position for PlaneSkript:
             //X
@@ -117,9 +122,7 @@ namespace Vuforia
                 //Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
                 //Debug.Log(mTrackableBehaviour.TrackableName + " Positioon " + Pos.x + " , " + Pos.z);
             }
-
         }
-
 
         private void OnTrackingLost()
         {
