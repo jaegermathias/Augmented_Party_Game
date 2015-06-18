@@ -18,11 +18,11 @@ public class Respawn : MonoBehaviour
     void Update()
     {
         //		Debug.Log ("Car Pos y: " + transform.position.y);
-        if (transform.position.y < -10f && lives > 0)
+     /*   if (transform.position.y < -10f && lives > 0)
         {
             transform.position = pos;
             lives--;
-        }
+        }*/
     }
 
 }

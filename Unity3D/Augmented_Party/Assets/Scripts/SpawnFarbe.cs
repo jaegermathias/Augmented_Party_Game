@@ -30,25 +30,30 @@ public class SpawnFarbe : MonoBehaviour
             case "Spawn_Pos1":
                 {
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.color = Color.blue;
-                    Debug.Log("Case 1");
+					//Speichert die Farbe des Autos, damit später auf den richtigen Marker gespawned wird
+					spieler.GetComponent<ZusaetzlicheCarInfo>().farbe = Color.blue; 
+					Debug.Log("Case 1, Fahrzeugfarbe:  " + spieler.GetComponent<ZusaetzlicheCarInfo>().farbe);
                     break;
                 }
             case "Spawn_Pos2":
                 {
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.color = Color.red;
-                    Debug.Log("Case 2");
+					spieler.GetComponent<ZusaetzlicheCarInfo>().farbe = Color.red;                
+					Debug.Log("Case 2, Fahrzeugfarbe: " + spieler.GetComponent<ZusaetzlicheCarInfo>().farbe);
                     break;
                 }
             case "Spawn_Pos3":
                 {
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.color = Color.yellow;
-                    Debug.Log("Case 3");
+					spieler.GetComponent<ZusaetzlicheCarInfo>().farbe = Color.yellow;        
+					Debug.Log("Case 3, Fahrzeugfarbe: " + spieler.GetComponent<ZusaetzlicheCarInfo>().farbe);
                     break;
                 }
             case "Spawn_Pos4":
                 {
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.color = Color.green;
-                    Debug.Log("Case 4");
+					spieler.GetComponent<ZusaetzlicheCarInfo>().farbe = Color.green;        
+					Debug.Log("Case 4, Fahrzeugfarbe: " + spieler.GetComponent<ZusaetzlicheCarInfo>().farbe);
                     break;
                 }
             default:
