@@ -15,19 +15,11 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 {
     #region PUBLIC_MEMBER_VARIABLES
 
-	/// <summary>
-	/// The materials that will be set for the teapot model
-	/// </summary>
-	public Material[] m_TeapotMaterials;
-
     #endregion // PUBLIC_MEMBER_VARIABLES
 
 
 
     #region PRIVATE_MEMBER_VARIABLES
-    
-	private GameObject mTeapot;
-	private List<Material> mActiveMaterials;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -42,12 +34,6 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 		for (int i = 0; i < vbs.Length; ++i) {
 			vbs [i].RegisterEventHandler (this);
 		}
-
-		// Get handle to the teapot object
-		//mTeapot = transform.FindChild("teapot").gameObject;
-
-		// The list of active materials
-		mActiveMaterials = new List<Material> ();
 	}
 
     #endregion // UNITY_MONOBEHAVIOUR_METHODS
@@ -68,7 +54,7 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 		// to the active material list:
 		switch (vb.VirtualButtonName) {
 		case "Spawn1":
-			Debug.Log("Spawn1");
+			Debug.Log ("Spawn1");
 			break;
 
 		case "Spawn2":
@@ -85,13 +71,7 @@ public class VirtualButtonEventHandler : MonoBehaviour,
 
 		GameObject Spiel = GameObject.FindGameObjectWithTag ("spielsteuerung");
 		Spiel.SendMessage ("spawneSpieler", vb.transform);
-		
-		// Apply the new material:
-		if (mActiveMaterials.Count > 0)
-			mTeapot.GetComponent<Renderer> ().material = mActiveMaterials [mActiveMaterials.Count - 1];
 	}
-
-
 	/// <summary>
 	/// Called when the virtual button has just been released:
 	/// </summary>

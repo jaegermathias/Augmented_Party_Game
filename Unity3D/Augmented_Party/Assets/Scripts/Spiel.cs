@@ -22,12 +22,13 @@ public class Spiel : MonoBehaviour {
 	
 	}
 
-	public void spawneSpieler(Transform vb){
-		if(Player == null){
-		// Man sollte sich noch ueberlegen wie der Spawnpunkt gewaehlt wird.
-		Transform spawnpunkt = vb;
-		this.Player = Instantiate(PlayerPrefab, (vb.position), (vb.rotation));
-		}
-	}
+	// OBSOLETE
+//	public void spawneSpieler(Transform vb){
+//		if(Player == null){
+//		// Man sollte sich noch ueberlegen wie der Spawnpunkt gewaehlt wird.
+//		Transform spawnpunkt = vb;
+//		this.Player = Instantiate(PlayerPrefab, (vb.position), (vb.rotation));
+//		}
+//	}
 
 }
