@@ -34,6 +34,8 @@ public class SpawnFarbe : MonoBehaviour
 		case "Spawn_Pos1":
 			{
 				spieler.transform.GetChild (0).transform.GetChild (0).GetComponent<Renderer> ().material.color = Color.blue;
+				spieler.transform.GetChild (0).transform.GetChild (3).GetComponent<Renderer> ().material.color = Color.blue;
+				spieler.transform.GetChild (0).transform.GetChild (5).GetComponent<Renderer> ().material.color = Color.blue;
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().farbe = Color.blue; 
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().spawn = marker.transform.position;
 				spieler.transform.rotation = new Quaternion (0.0f, 0.0f, 0.0f, -1.0f);
@@ -43,6 +45,8 @@ public class SpawnFarbe : MonoBehaviour
 		case "Spawn_Pos2":
 			{
 				spieler.transform.GetChild (0).transform.GetChild (0).GetComponent<Renderer> ().material.color = Color.red;
+			spieler.transform.GetChild (0).transform.GetChild (3).GetComponent<Renderer> ().material.color = Color.red;
+			spieler.transform.GetChild (0).transform.GetChild (5).GetComponent<Renderer> ().material.color = Color.red;
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().farbe = Color.red;                
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().spawn = marker.transform.position;
 				spieler.transform.rotation = new Quaternion (0.0f, -0.7f, 0.0f, -0.7f);
@@ -52,6 +56,8 @@ public class SpawnFarbe : MonoBehaviour
 		case "Spawn_Pos3":
 			{
 				spieler.transform.GetChild (0).transform.GetChild (0).GetComponent<Renderer> ().material.color = Color.yellow;
+			spieler.transform.GetChild (0).transform.GetChild (3).GetComponent<Renderer> ().material.color = Color.yellow;
+			spieler.transform.GetChild (0).transform.GetChild (5).GetComponent<Renderer> ().material.color = Color.yellow;
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().farbe = Color.yellow;        
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().spawn = marker.transform.position;
 				spieler.transform.rotation = new Quaternion (0.0f, 1.0f, 0.0f, 0.0f);
@@ -61,6 +67,8 @@ public class SpawnFarbe : MonoBehaviour
 		case "Spawn_Pos4":
 			{
 				spieler.transform.GetChild (0).transform.GetChild (0).GetComponent<Renderer> ().material.color = Color.green;
+			spieler.transform.GetChild (0).transform.GetChild (3).GetComponent<Renderer> ().material.color = Color.green;
+			spieler.transform.GetChild (0).transform.GetChild (5).GetComponent<Renderer> ().material.color = Color.green;
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().farbe = Color.green;        
 				spieler.GetComponent<ZusaetzlicheCarInfo> ().spawn = marker.transform.position;
 				spieler.transform.rotation = new Quaternion (0.0f, -0.7f, 0.0f, 0.7f);
