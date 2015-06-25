@@ -12,6 +12,8 @@ namespace UnityEngine.Networking
 		[SerializeField] public int offsetX;
 		[SerializeField] public int offsetY;
 
+		public GUISkin customSkin;
+
 		// Runtime variable
 		bool showServer = false;
 
@@ -31,10 +33,10 @@ namespace UnityEngine.Networking
 
 			if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
 			{
-//				if (Input.GetKeyDown(KeyCode.S))
-//				{
-//					manager.StartServer();
-//				}
+				if (Input.GetKeyDown(KeyCode.S))
+				{
+					manager.StartServer();
+				}
 				if (Input.GetKeyDown(KeyCode.H))
 				{
 					manager.StartHost();
@@ -58,9 +60,8 @@ namespace UnityEngine.Networking
 			if (!showGUI)
 				return;
 
-			int xpos = 10 + offsetX;
-			int ypos = 40 + offsetY;
-			int spacing = 24;
+			//int xpos = 10 + offsetX;
+			//int ypos = 40 + offsetY;
 
 			if (!NetworkClient.active && !NetworkServer.active && manager.matchMaker == null)
 			{
@@ -68,32 +69,27 @@ namespace UnityEngine.Networking
 				{
 					manager.StartHost();
 				}
-				ypos += spacing;
 
 				if (GUILayout.Button("Netzwerkspiel beitreten (C)"))
 				{
 					manager.StartClient();
 				}
 				manager.networkAddress = GUILayout.TextField(manager.networkAddress);
-				ypos += spacing;
 
-//				if (GUI.Button(new Rect(xpos, ypos, 200, 20), "LAN Server Only(S)"))
-//				{
-//					manager.StartServer();
-//				}
-				ypos += spacing;
+				if (GUILayout.Button("LAN Server Only(S)"))
+				{
+					manager.StartServer();
+				}
 			}
 			else
 			{
 				if (NetworkServer.active)
 				{
 					GUILayout.Label("Server: port=" + manager.networkPort);
-					ypos += spacing;
 				}
 				if (NetworkClient.active)
 				{
 					GUILayout.Label("Client: address=" + manager.networkAddress + " port=" + manager.networkPort);
-					ypos += spacing;
 				}
 			}
 
@@ -108,7 +104,6 @@ namespace UnityEngine.Networking
 						ClientScene.AddPlayer(0);
 					}
 				}
-				ypos += spacing;
 			}
 
 			if (NetworkServer.active || NetworkClient.active)
@@ -117,20 +112,16 @@ namespace UnityEngine.Networking
 				{
 					manager.StopHost();
 				}
-				ypos += spacing;
 			}
 
 			if (!NetworkServer.active && !NetworkClient.active)
 			{
-				ypos += 10;
-
 				if (manager.matchMaker == null)
 				{
 					if (GUILayout.Button("Enable Match Maker (M)"))
 					{
 						manager.StartMatchMaker();
 					}
-					ypos += spacing;
 				}
 				else
 				{
@@ -140,21 +131,16 @@ namespace UnityEngine.Networking
 						{
 							if (GUILayout.Button("Create Internet Match"))
 							{
-								manager.matchMaker.CreateMatch(manager.matchName, manager.matchSize, true, "", manager.OnMatchCreate);
+								manager.matchMaker.CreateMatch(manager.matchName, manager.matchSize, false, "", manager.OnMatchCreate);
 							}
-							ypos += spacing;
 
 							GUILayout.Label("Room Name:");
 							manager.matchName = GUILayout.TextField(manager.matchName);
-							ypos += spacing;
-
-							ypos += 10;
 
 							if (GUILayout.Button("Find Internet Match"))
 							{
 								manager.matchMaker.ListMatches(0,20, "", manager.OnMatchList);
 							}
-							ypos += spacing;
 						}
 						else
 						{
@@ -166,7 +152,6 @@ namespace UnityEngine.Networking
 									manager.matchSize = (uint)match.currentSize;
 									manager.matchMaker.JoinMatch(match.networkId, "", manager.OnMatchJoined);
 								}
-								ypos += spacing;
 							}
 						}
 					}
@@ -177,19 +162,16 @@ namespace UnityEngine.Networking
 					}
 					if (showServer)
 					{
-						ypos += spacing;
 						if (GUILayout.Button("Local"))
 						{
 							manager.SetMatchHost("localhost", 1337, false);
 							showServer = false;
 						}
-						ypos += spacing;
 						if (GUILayout.Button("Internet"))
 						{
 							manager.SetMatchHost("mm.unet.unity3d.com", 443, true);
 							showServer = false;
 						}
-						ypos += spacing;
 						if (GUILayout.Button("Staging"))
 						{
 							manager.SetMatchHost("staging-mm.unet.unity3d.com", 443, true);
@@ -197,16 +179,12 @@ namespace UnityEngine.Networking
 						}
 					}
 
-					ypos += spacing;
-
 					GUILayout.Label( "MM Uri: " + manager.matchMaker.baseUri);
-					ypos += spacing;
 
 					if (GUILayout.Button("Disable Match Maker"))
 					{
 						manager.StopMatchMaker();
 					}
-					ypos += spacing;
 				}
 			}
 		}
