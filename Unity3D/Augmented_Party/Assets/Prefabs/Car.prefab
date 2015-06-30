@@ -1828,7 +1828,7 @@ MonoBehaviour:
     i14: 0
     i15: 68
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &11455332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3097,6 +3097,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_InterpolateRotation
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPlayerAuthority
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
