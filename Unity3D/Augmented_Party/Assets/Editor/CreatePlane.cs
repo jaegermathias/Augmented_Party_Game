@@ -130,9 +130,9 @@ public class CreatePlane : ScriptableWizard
 			int hCount2 = widthSegments+1;
 			int vCount2 = lengthSegments+1;
 			int numTriangles = widthSegments * lengthSegments * 6;
-			if (twoSided) {
-				numTriangles *= 2;
-			}
+            //if (twoSided) {
+            //    numTriangles *= 2;
+            //}
 			int numVertices = hCount2 * vCount2;
 			
 			Vector3[] vertices = new Vector3[numVertices];
