@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace UnityStandardAssets.Vehicles.Car
 {
@@ -16,7 +17,7 @@ namespace UnityStandardAssets.Vehicles.Car
         KPH
     }
 
-    public class CarController : MonoBehaviour
+	public class CarController : NetworkBehaviour
     {
         [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
         [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
@@ -128,6 +129,12 @@ namespace UnityStandardAssets.Vehicles.Car
 
         public void Move(float steering, float accel, float footbrake, float handbrake)
         {
+			if (!isLocalPlayer)
+			{
+				// exit from update if this is not the local player
+				return;
+			}
+
             for (int i = 0; i < 4; i++)
             {
                 Quaternion quat;
