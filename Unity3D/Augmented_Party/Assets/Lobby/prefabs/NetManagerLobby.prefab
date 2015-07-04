@@ -102,7 +102,7 @@ MonoBehaviour:
   matchSize: 4
   m_ShowLobbyGUI: 0
   m_MaxPlayers: 4
-  m_MaxPlayersPerConnection: 4
+  m_MaxPlayersPerConnection: 2
   m_LobbyPlayerPrefab: {fileID: 11474776, guid: 62c72f652ef24ed49b8a640aff045011,
     type: 2}
   m_GamePlayerPrefab: {fileID: 145526, guid: c7a7cfae19c454d4c8747f525a1a0044, type: 2}
