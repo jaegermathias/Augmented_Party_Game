@@ -61,11 +61,21 @@ public class Spielelogik : NetworkBehaviour {
 	public void SpielerStatusAktualisieren(){
 		Debug.Log ("SpielerStatusAktualisieren");
 		int i = 0;
-		foreach(GameObject Spieler in SpielerListe) {
-			GameObject status = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
-			status.SetActive(true);
-			status.GetComponent<Text>().text = "III";
-			status.GetComponent<Text>().color = farben[i];
+		foreach(GameObject SpielerObjekt in SpielerListe) {
+
+			// Anzahl der Leben des entsprechenden Spielers abfragen
+			int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().leben;
+
+			// Anzahl Leben in die entsprechende Anzeige einfuegen
+			GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
+			lebensAnzeige.SetActive(true);
+			lebensAnzeige.GetComponent<Text>().text = "";
+			for(int j = 0; j < anzahlLeben; j++)
+			{
+				lebensAnzeige.GetComponent<Text>().text += "I";
+			}
+
+			lebensAnzeige.GetComponent<Text>().color = farben[i];
 			i++;
 //			SpielerListe.Add(p);
 //			SpielerStatusAktualisieren();
