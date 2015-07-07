@@ -305,6 +305,7 @@ GameObject:
   - 114: {fileID: 11433360}
   - 114: {fileID: 11440774}
   - 114: {fileID: 11455332}
+  - 114: {fileID: 11411670}
   m_Layer: 0
   m_Name: GamePlayerPrefab
   m_TagString: Player
@@ -1726,6 +1727,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
+--- !u!114 &11411670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c8519798a1dbd44a5183f7fed046cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leben: 5
 --- !u!114 &11430190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1921,7 +1934,7 @@ MonoBehaviour:
   m_ReverseTorque: 500
   m_MaxHandbrakeTorque: 1e+08
   m_Downforce: 100
-  m_SpeedType: 0
+  m_SpeedType: 1
   m_Topspeed: 150
   m_RevRangeBoundary: 1
   m_SlipLimit: .300000012
@@ -3100,6 +3113,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPlayerAuthority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_SpeedType
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

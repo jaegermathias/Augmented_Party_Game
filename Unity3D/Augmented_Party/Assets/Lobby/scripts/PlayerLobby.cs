@@ -3,8 +3,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-
-using System.Collections;
 using UnityEngine.EventSystems;
 
 public class PlayerLobby : NetworkLobbyPlayer
@@ -23,6 +21,8 @@ public class PlayerLobby : NetworkLobbyPlayer
 	
 	private Color[] farben = new Color[4]{blau,rot,gelb,gruen};
 
+	private int guiVersatz = 1;
+
 	// cached components
 	ColorControl cc;
 	NetworkLobbyPlayer lobbyPlayer;
@@ -31,7 +31,14 @@ public class PlayerLobby : NetworkLobbyPlayer
 	{
 		cc = GetComponent<ColorControl> ();
 		lobbyPlayer = GetComponent<NetworkLobbyPlayer> ();
+
+				if (Application.platform == RuntimePlatform.Android)
+					guiVersatz = 1;
+				else {
+					guiVersatz = 4;
+				}
 	}
+
 
 	public override void OnClientEnterLobby ()
 	{
@@ -104,7 +111,7 @@ public class PlayerLobby : NetworkLobbyPlayer
 
 		// setup button hooks
 		var hooks = playerCanvas.GetComponent<PlayerCanvasHooks> ();
-		hooks.panelPos.localPosition = new Vector3 (GetPlayerPos (lobbyPlayer.slot), 0, 0);
+		hooks.panelPos.localPosition = new Vector3 (GetPlayerPos (lobbyPlayer.slot) * guiVersatz, 0, 0);
 		hooks.SetColor (cc.myColor);
 
 		hooks.OnColorChangeHook = OnGUIColorChange;

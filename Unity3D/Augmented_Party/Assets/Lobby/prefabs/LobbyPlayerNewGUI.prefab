@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2891ac19403b064cb7e495aff708a2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowLobbyGUI: 0
+  ShowLobbyGUI: 1
   playerCanvasPrefab: {fileID: 22348072, guid: 9b7433fa8bec0b64a8ffe2ea00b04b6e, type: 2}
   playerCanvas: {fileID: 0}
 --- !u!114 &11476546
@@ -94,7 +94,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: ShowLobbyGUI
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 107672}

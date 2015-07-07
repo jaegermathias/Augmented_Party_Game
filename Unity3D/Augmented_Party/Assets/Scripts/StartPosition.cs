@@ -14,10 +14,12 @@ public class StartPosition : MonoBehaviour
 // Gruen RGB: 0 153 37 Normalisiert: 
 	private Color gruen = new Color (0.0F, 0.6F, 0, 145F);
 
-	// Use this for initialization
-	void Start ()
-	{
+	private GameObject Spielelogik;
 
+	// Use this for initialization
+	void Awake ()
+	{
+		Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
 	}
 		
 	// Update is called once per frame
@@ -28,13 +30,13 @@ public class StartPosition : MonoBehaviour
 		
 	private void OnTriggerEnter (Collider other)
 	{
-		try {
+//		try {
 			if (!(other.transform.parent.gameObject.transform.parent.gameObject.tag == "Player")) {
 				return;
 			}
-		} catch (NullReferenceException ex) {
-			return;
-		}
+//		} catch (NullReferenceException ex) {
+//			return;
+//		}
 			
 		GameObject spieler = other.transform.parent.gameObject.transform.parent.gameObject;
 		GameObject marker = transform.gameObject;
@@ -86,5 +88,7 @@ public class StartPosition : MonoBehaviour
 		/* Nach der obigen Initialisierung, hier den Trigger des Colliders deaktivieren."*/
 		(gameObject.GetComponent (typeof(Collider)) as Collider).enabled = false;
 		//Destroy (marker.transform.parent.gameObject);
+
+		Spielelogik.GetComponent<Spielelogik> ().SpielerStatusAktualisieren ();
 	}
 }
