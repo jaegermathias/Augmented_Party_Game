@@ -102,7 +102,7 @@ MonoBehaviour:
   matchSize: 4
   m_ShowLobbyGUI: 0
   m_MaxPlayers: 4
-  m_MaxPlayersPerConnection: 2
+  m_MaxPlayersPerConnection: 4
   m_LobbyPlayerPrefab: {fileID: 11474776, guid: 62c72f652ef24ed49b8a640aff045011,
     type: 2}
   m_GamePlayerPrefab: {fileID: 145526, guid: c7a7cfae19c454d4c8747f525a1a0044, type: 2}
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_PlayScene: Game
   lobbySlots: []
   lobbyCanvas:
-    prefab: {fileID: 22318024, guid: 4770253c3e4695648a457977e87a191d, type: 2}
+    prefab: {fileID: 22332996, guid: fd6642779f39a8249b5fa74264923204, type: 2}
   offlineCanvas:
     prefab: {fileID: 22347380, guid: b2d20cd35cfbfb94aae6bb35f426aefa, type: 2}
   onlineCanvas:

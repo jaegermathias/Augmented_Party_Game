@@ -345,10 +345,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_MaxPlayersPerConnection
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
   m_IsPrefabParent: 0
