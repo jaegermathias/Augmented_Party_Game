@@ -2,15 +2,15 @@
 Studentisches Arbeitsprojekt im Modul VRAR an der Hochschule Fulda im Sommersemester 2015.
 
 ## Inhalt
-* [Vorgehensweise beim Testen](#vorgehensweise-beim-testen)
+* [Projekteinrichtung](#projekteinrichtung)
 * [Hinweise zum MatchMaking (BETA)](#hinweise-zum-matchmaking-beta)
 * [Branch: Master](#vorgehensweise-beim-testen)
 * [Branch: Android_Network-Bugfix](#branch-android_network-bugfix)
 
 
-## Vorgehensweise beim Testen
-- Sicherstellen, dass die aktuelle Unity-Version genutzt wird (5.1.1f1)
-- Immer aus der Lobby starten, nicht aus der Spielszene
+## Projekteinrichtung
+- Sicherstellen, dass die Unity-Version 5.1.1f1 zusammen mit Vuforia 4.2.3 genutzt wird. Keine Updates! Nur diese Kombination scheint für unsere Belange kompatibel! Ich habe die neueren Versionen in jeder Komnbination erfolglos getestet.
+- Immer aus der Szene "Lobby" starten, nicht aus "Game"
 
 ## Hinweise zum MatchMaking (BETA)
 Unter der Version 5.1.1f1 scheint das MatchMaking ueber das Internet zu funktionieren (Allerdings bislang nicht auf Android).
