@@ -35,7 +35,7 @@ public class PlayerLobby : NetworkLobbyPlayer
 				if (Application.platform == RuntimePlatform.Android)
 					guiVersatz = 1;
 				else {
-					guiVersatz = 4;
+					guiVersatz = 2;
 				}
 	}
 
