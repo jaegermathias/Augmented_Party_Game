@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
     <Tracking>
+        <ImageTarget name="Koffer_Samples.Back" size="3.450000 1.050051"/>
+        <ImageTarget name="Koffer_Samples.Front" size="3.450000 1.049496"/>
         <ImageTarget name="Koffer_Samples.Right" size="2.450000 1.049861"/>
         <ImageTarget name="Koffer_Samples.Bottom" size="3.450000 2.450467"/>
-        <ImageTarget name="Koffer_Samples.Back" size="3.450000 1.050051"/>
-        <ImageTarget name="Koffer_Samples.Top" size="3.450000 2.450529"/>
-        <ImageTarget name="Koffer_Samples.Front" size="3.450000 1.049496"/>
         <ImageTarget name="Koffer_Samples.Left" size="2.450000 1.049861"/>
+        <ImageTarget name="Koffer_Samples.Top" size="3.450000 2.450529"/>
         <MultiTarget name="Koffer_Samples">
             <Part name="Koffer_Samples.Left" translation="-1.725000023841858 0 0" rotation="AD: 0 1 0 -90"/>
             <Part name="Koffer_Samples.Right" translation="1.725000023841858 0 0" rotation="AD: 0 1 0 90"/>

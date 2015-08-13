@@ -1,0 +1,1 @@
+Diese Bilder dienten in früheren Versionen als ImageTargets und könnten dafür verwendet werden.
