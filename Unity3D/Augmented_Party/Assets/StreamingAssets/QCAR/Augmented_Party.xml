@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
-  <Tracking>
-    <ImageTarget name="marker_zentrum_quadratisch" size="21.000000 21.000000" />
-    <ImageTarget name="chips21" size="21.000000 14.700000" />
-  </Tracking>
+<QCARConfig>
+    <Tracking>
+        <ImageTarget name="marker_zentrum_quadratisch" size="21.000000 21.000000"/>
+        <ImageTarget name="WorldCenter_Koffer.Back" size="34.500000 10.500511"/>
+        <ImageTarget name="WorldCenter_Koffer.Front" size="34.500000 10.494958"/>
+        <ImageTarget name="WorldCenter_Koffer.Right" size="24.500000 10.498610"/>
+        <ImageTarget name="WorldCenter_Koffer.Bottom" size="34.500000 24.504673"/>
+        <ImageTarget name="WorldCenter_Koffer.Left" size="24.500000 10.498610"/>
+        <ImageTarget name="WorldCenter_Koffer.Top" size="34.500000 24.505293"/>
+        <MultiTarget name="WorldCenter_Koffer">
+            <Part name="WorldCenter_Koffer.Left" translation="-17.25 0 0" rotation="AD: 0 1 0 -90"/>
+            <Part name="WorldCenter_Koffer.Right" translation="17.25 0 0" rotation="AD: 0 1 0 90"/>
+            <Part name="WorldCenter_Koffer.Front" translation="0 0 12.25" rotation="AD: 1 0 0 0"/>
+            <Part name="WorldCenter_Koffer.Back" translation="0 0 -12.25" rotation="AD: 0 1 0 180"/>
+            <Part name="WorldCenter_Koffer.Top" translation="0 5.25 0" rotation="AD: 1 0 0 -90"/>
+            <Part name="WorldCenter_Koffer.Bottom" translation="0 -5.25 0" rotation="AD: 1 0 0 90"/>
+        </MultiTarget>
+    </Tracking>
 </QCARConfig>

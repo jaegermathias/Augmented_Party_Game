@@ -69,16 +69,16 @@ MonoBehaviour:
   m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 100000, guid: d8e7ba7bff9db1e40b10e7ffba5d3d48, type: 2}
-  m_CustomConfig: 0
+  m_CustomConfig: 1
   m_MaxConnections: 4
   m_ConnectionConfig:
     m_PacketSize: 1500
     m_FragmentSize: 500
     m_ResendTimeout: 1200
-    m_DisconnectTimeout: 2000
-    m_ConnectTimeout: 2000
-    m_MinUpdateTimeout: 10
-    m_PingTimeout: 500
+    m_DisconnectTimeout: 4000
+    m_ConnectTimeout: 4000
+    m_MinUpdateTimeout: 20
+    m_PingTimeout: 1000
     m_ReducedPingTimeout: 100
     m_AllCostTimeout: 20
     m_NetworkDropThreshold: 5
