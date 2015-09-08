@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class AnimatedGifDrawer : MonoBehaviour
 {
-	public string loadingGifPath = ("../trackingLost/trackingLost_transparent.gif");
-	public float speed = 1;
-	public Vector2 drawPosition;
+	private string loadingGifPath = ("../trackingLost/trackingLost_b01.gif");
+	private float speed = 1;
+	private Vector2 drawPosition;
 
 	List<Texture2D> gifFrames = new List<Texture2D>();
 	void Awake()
