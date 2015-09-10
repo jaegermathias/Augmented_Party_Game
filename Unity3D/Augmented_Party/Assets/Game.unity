@@ -605,7 +605,7 @@ Transform:
   - {fileID: 1085271667}
   - {fileID: 2080897728}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &443711561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2046,7 +2046,7 @@ RectTransform:
   - {fileID: 1397133544}
   - {fileID: 443711562}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
