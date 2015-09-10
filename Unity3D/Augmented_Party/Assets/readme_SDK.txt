@@ -18,3 +18,4 @@ To view the release notes, go to https://developer.vuforia.com/library/release-n
             All Rights Reserved.
          Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
   ============================================================================*/
+Test mit Windows 10 Erfolgreich
