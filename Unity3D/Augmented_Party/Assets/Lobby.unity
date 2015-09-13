@@ -369,6 +369,10 @@ Prefab:
       propertyPath: m_UseSimulator
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
+      propertyPath: m_GamePlayerPrefab
+      value: 
+      objectReference: {fileID: 123050, guid: 620b30be837a93a42b0a06dab5a347b0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
   m_IsPrefabParent: 0
