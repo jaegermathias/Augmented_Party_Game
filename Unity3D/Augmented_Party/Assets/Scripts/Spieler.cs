@@ -7,7 +7,7 @@ public class Spieler : NetworkBehaviour {
 	[SyncVar]
 	//public int moveX = 0;
 	//public int moveY = 0;
-	public int leben = 2;
+	public int leben = 3;
 	//public float moveSpeed = 0.2f;
 
 	//[SyncVar]

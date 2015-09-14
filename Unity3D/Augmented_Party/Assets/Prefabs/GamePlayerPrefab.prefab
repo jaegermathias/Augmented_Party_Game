@@ -121,6 +121,7 @@ GameObject:
   - 114: {fileID: 11496144}
   - 114: {fileID: 11434712}
   - 114: {fileID: 11432018}
+  - 114: {fileID: 11450510}
   m_Layer: 0
   m_Name: GamePlayerPrefab
   m_TagString: Player
@@ -1828,6 +1829,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
+--- !u!114 &11450510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5369efbb66132f447853e50d2affc7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leben: 4
+  farbe: {r: 0, g: 0, b: 0, a: 0}
+  spawn: {x: 0, y: 0, z: 0}
 --- !u!114 &11453160
 MonoBehaviour:
   m_ObjectHideFlags: 1
