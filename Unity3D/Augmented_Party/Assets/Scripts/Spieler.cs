@@ -8,6 +8,8 @@ public class Spieler : NetworkBehaviour {
 	//public int moveX = 0;
 	//public int moveY = 0;
 	public int leben = 3;
+    public int StartPos;
+    public Vector3 spawn;
 	//public float moveSpeed = 0.2f;
 
 	//[SyncVar]

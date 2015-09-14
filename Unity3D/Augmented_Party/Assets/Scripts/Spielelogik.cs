@@ -4,84 +4,121 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class Spielelogik : NetworkBehaviour {
+public class Spielelogik : NetworkBehaviour
+{
 
-	[SyncVar]
-	public List<GameObject> SpielerListe;
+    [SyncVar]
+    public List<GameObject> SpielerListe;
 
-	public Canvas spielerStatus;
-	
-	// Blau RGB: 51 105 232 Normalisiert: 
-	private static Color blau = new Color (0.2F, 0.042F, 0.910F);
-	//Rot RGB: 213 15 37 Normalisiert: 
-	private static Color rot = new Color (0.835F, 0.059F, 0.145F);
-	// Gelb RGB: 238 178 17 Normalisiert: 
-	private static Color gelb = new Color (0.933F, 0.698F, 0.066F);
-	// Gruen RGB: 0 153 37 Normalisiert: 
-	private static Color gruen = new Color (0.0F, 0.6F, 0, 145F);
-	private Color[] farben = new Color[4]{blau,rot,gelb,gruen};
+    public Canvas spielerStatus;
 
-	private GameObject[] spielerTags;
-	
-	void Start() {
-		SpielerListe = new List<GameObject>();
-		spielerTags = GameObject.FindGameObjectsWithTag("Player");
-		foreach(GameObject p in spielerTags) {
-			SpielerListe.Add(p);
-		}
-		SpielerStatusAktualisieren();
-	}
-	
-	void OnPlayerConnected() {
-		SpielerListe.Clear();
-		spielerTags = GameObject.FindGameObjectsWithTag("Player");
-		foreach(GameObject p in spielerTags) {
-			SpielerListe.Add(p);
-			// Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
-			if(this.spielerStatus.GetComponent<SpielerStatus>())
-			{
-				SpielerStatusAktualisieren();
-			}
-		}
-	}
-	
-	void OnPlayerDisconnected(NetworkPlayer player) {
-		SpielerListe.Clear();
-		spielerTags = GameObject.FindGameObjectsWithTag("Player");
-		foreach(GameObject p in spielerTags) {
-			SpielerListe.Add(p);
-			// Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
-			if(this.spielerStatus.GetComponent<SpielerStatus>())
-			{
-				SpielerStatusAktualisieren();
-			}
-		}
-	}
+    // Blau RGB: 51 105 232 Normalisiert: 
+    private static Color blau = new Color(0.2F, 0.042F, 0.910F);
+    //Rot RGB: 213 15 37 Normalisiert: 
+    private static Color rot = new Color(0.835F, 0.059F, 0.145F);
+    // Gelb RGB: 238 178 17 Normalisiert: 
+    private static Color gelb = new Color(0.933F, 0.698F, 0.066F);
+    // Gruen RGB: 0 153 37 Normalisiert: 
+    private static Color gruen = new Color(0.0F, 0.6F, 0, 145F);
+    private Color[] farben = new Color[4] { blau, rot, gelb, gruen };
 
-	public void SpielerStatusAktualisieren(){
-		Debug.Log ("SpielerStatusAktualisieren");
-		int i = 0;
-		foreach(GameObject SpielerObjekt in SpielerListe) {
+    private GameObject[] spielerTags;
 
-			// Anzahl der Leben des entsprechenden Spielers abfragen
-			int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().leben;
+    void Start()
+    {
+        SpielerListe = new List<GameObject>();
+        spielerTags = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in spielerTags)
+        {
+            SpielerListe.Add(p);
+        }
+        SpielerStatusAktualisieren();
+    }
 
-			// Anzahl Leben in die entsprechende Anzeige einfuegen
-			GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
-			lebensAnzeige.SetActive(true);
-			lebensAnzeige.GetComponent<Text>().text = "";
-			for(int j = 0; j < anzahlLeben; j++)
-			{
-				lebensAnzeige.GetComponent<Text>().text += "I";
-			}
+    void OnPlayerConnected()
+    {
+        SpielerListe.Clear();
+        spielerTags = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in spielerTags)
+        {
+            SpielerListe.Add(p);
+            // Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
+            if (this.spielerStatus.GetComponent<SpielerStatus>())
+            {
+                SpielerStatusAktualisieren();
+            }
+        }
+    }
 
-			lebensAnzeige.GetComponent<Text>().color = farben[i];
-			i++;
-//			SpielerListe.Add(p);
-//			SpielerStatusAktualisieren();
-		}
-		//GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
-		//GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
-	}
+    void OnPlayerDisconnected(NetworkPlayer player)
+    {
+        SpielerListe.Clear();
+        spielerTags = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in spielerTags)
+        {
+            SpielerListe.Add(p);
+            // Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
+            if (this.spielerStatus.GetComponent<SpielerStatus>())
+            {
+                SpielerStatusAktualisieren();
+            }
+        }
+    }
 
-}
+    public void SpielerStatusAktualisieren()
+    {
+        Debug.Log("SpielerStatusAktualisieren");
+        int i = 0;
+        foreach (GameObject SpielerObjekt in SpielerListe)
+        {
+
+            // Anzahl der Leben des entsprechenden Spielers abfragen
+            int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().leben;
+
+            // Anzahl Leben in die entsprechende Anzeige einfuegen
+            GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
+            lebensAnzeige.SetActive(true);
+            lebensAnzeige.GetComponent<Text>().text = "";
+            for (int j = 0; j < anzahlLeben; j++)
+            {
+                lebensAnzeige.GetComponent<Text>().text += "I";
+            }
+
+            lebensAnzeige.GetComponent<Text>().color = farben[i];
+            i++;
+            //			SpielerListe.Add(p);
+            //			SpielerStatusAktualisieren();
+        }
+
+        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
+        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
+    }
+
+    public void SpielerStatusAktualisieren(GameObject GO)
+    {
+        Debug.Log("SpielerStatusAktualisieren");
+        int i = 0;
+       
+
+            // Anzahl der Leben des entsprechenden Spielers abfragen
+            int anzahlLeben = GO.GetComponent<Spieler>().leben;
+
+            // Anzahl Leben in die entsprechende Anzeige einfuegen
+            GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
+            lebensAnzeige.SetActive(true);
+            lebensAnzeige.GetComponent<Text>().text = "";
+            for (int j = 0; j < anzahlLeben; j++)
+            {
+                lebensAnzeige.GetComponent<Text>().text += "I";
+            }
+
+            lebensAnzeige.GetComponent<Text>().color = farben[i];
+            i++;
+            //			SpielerListe.Add(p);
+            //			SpielerStatusAktualisieren();
+        }
+
+        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
+        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
+    }
+

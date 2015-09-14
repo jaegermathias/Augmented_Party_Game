@@ -21,15 +21,19 @@ public class Respawn : MonoBehaviour
     {
         try
         {
-            int leben = other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<ZusaetzlicheCarInfo>().leben - 1;
+            GameObject gefallenGo = other.transform.parent.gameObject.transform.parent.gameObject;
+            GameObject SpieleLogi = GameObject.FindGameObjectWithTag("Spielelogik");
+            SpieleLogi.GetComponent<Spielelogik>().SpielerStatusAktualisieren(gefallenGo);
+
+            int leben = other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Spieler>().leben;
             String objektTag = other.transform.parent.gameObject.transform.parent.gameObject.tag;
 
             if (leben > 0 && objektTag == "Player")
             {
                 GameObject car = other.transform.parent.gameObject.transform.parent.gameObject;
-                car.transform.position = car.GetComponent<ZusaetzlicheCarInfo>().spawn;
+                car.transform.position = car.GetComponent<Spieler>().spawn;
 
-                switch (car.GetComponent<ZusaetzlicheCarInfo>().StartPos)
+                switch (car.GetComponent<Spieler>().StartPos)
                 {
                     case 1:
                         car.transform.rotation = new Quaternion(0.0f, -0.7f, 0.0f, -0.7f);
@@ -59,7 +63,7 @@ public class Respawn : MonoBehaviour
                         break;
                 }
                 car.GetComponent<Rigidbody>().velocity = Vector3.zero;
-                car.GetComponent<ZusaetzlicheCarInfo>().leben--;
+                car.GetComponent<Spieler>().leben--;
             }
         }
         catch (NullReferenceException ex)

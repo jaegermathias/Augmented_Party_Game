@@ -49,8 +49,8 @@ public class StartPosition : MonoBehaviour
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", blau);
                     spieler.transform.GetChild(0).transform.GetChild(3).GetComponent<Renderer>().material.SetColor("_Color", blau);
                     spieler.transform.GetChild(0).transform.GetChild(5).GetComponent<Renderer>().material.SetColor("_Color", blau);
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().StartPos = 1; 
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().spawn = marker.transform.position;
+                    spieler.GetComponent<Spieler>().StartPos = 1; 
+                    spieler.GetComponent<Spieler>().spawn = marker.transform.position;
                     break;
                 }
             case "StartPosition2":
@@ -58,8 +58,8 @@ public class StartPosition : MonoBehaviour
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", rot);
                     spieler.transform.GetChild(0).transform.GetChild(3).GetComponent<Renderer>().material.SetColor("_Color", rot);
                     spieler.transform.GetChild(0).transform.GetChild(5).GetComponent<Renderer>().material.SetColor("_Color", rot);
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().StartPos = 2;
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().spawn = marker.transform.position;
+                    spieler.GetComponent<Spieler>().StartPos = 2;
+                    spieler.GetComponent<Spieler>().spawn = marker.transform.position;
                     break;
                 }
             case "StartPosition3":
@@ -67,8 +67,8 @@ public class StartPosition : MonoBehaviour
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", gelb);
                     spieler.transform.GetChild(0).transform.GetChild(3).GetComponent<Renderer>().material.SetColor("_Color", gelb);
                     spieler.transform.GetChild(0).transform.GetChild(5).GetComponent<Renderer>().material.SetColor("_Color", gelb);
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().StartPos = 3;
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().spawn = marker.transform.position;
+                    spieler.GetComponent<Spieler>().StartPos = 3;
+                    spieler.GetComponent<Spieler>().spawn = marker.transform.position;
                     break;
                 }
             case "StartPosition4":
@@ -76,8 +76,8 @@ public class StartPosition : MonoBehaviour
                     spieler.transform.GetChild(0).transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_Color", gruen);
                     spieler.transform.GetChild(0).transform.GetChild(3).GetComponent<Renderer>().material.SetColor("_Color", gruen);
                     spieler.transform.GetChild(0).transform.GetChild(5).GetComponent<Renderer>().material.SetColor("_Color", gruen);
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().StartPos = 4;
-                    spieler.GetComponent<ZusaetzlicheCarInfo>().spawn = marker.transform.position;
+                    spieler.GetComponent<Spieler>().StartPos = 4;
+                    spieler.GetComponent<Spieler>().spawn = marker.transform.position;
                     //spieler.transform.rotation = new Quaternion(0.0f, -0.7f, 0.0f, 0.7f);
                     break;
                 }
