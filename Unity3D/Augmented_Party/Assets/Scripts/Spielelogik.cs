@@ -74,15 +74,18 @@ public class Spielelogik : NetworkBehaviour
 
             // Anzahl der Leben des entsprechenden Spielers abfragen
             int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().leben;
+            Debug.Log("Anzahl Leben : " + anzahlLeben);
 
             // Anzahl Leben in die entsprechende Anzeige einfuegen
             GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
             lebensAnzeige.SetActive(true);
             lebensAnzeige.GetComponent<Text>().text = "";
-            for (int j = 0; j < anzahlLeben; j++)
-            {
-                lebensAnzeige.GetComponent<Text>().text += "I";
-            }
+            lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
+            ////Anzeige mit strichen anstelle der Zahl (geht max bis 3)
+            //for (int j = 0; j < anzahlLeben; j++)
+            //{
+            //    lebensAnzeige.GetComponent<Text>().text += "I";
+            //}
 
             lebensAnzeige.GetComponent<Text>().color = farben[i];
             i++;
@@ -96,29 +99,33 @@ public class Spielelogik : NetworkBehaviour
 
     public void SpielerStatusAktualisieren(GameObject GO)
     {
-        Debug.Log("SpielerStatusAktualisieren");
-        int i = 0;
-       
+        //StartPosition des Spielers
+        int i = GO.GetComponent<Spieler>().StartPos;
 
-            // Anzahl der Leben des entsprechenden Spielers abfragen
-            int anzahlLeben = GO.GetComponent<Spieler>().leben;
 
-            // Anzahl Leben in die entsprechende Anzeige einfuegen
-            GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
-            lebensAnzeige.SetActive(true);
-            lebensAnzeige.GetComponent<Text>().text = "";
-            for (int j = 0; j < anzahlLeben; j++)
-            {
-                lebensAnzeige.GetComponent<Text>().text += "I";
-            }
+        // Anzahl der Leben des entsprechenden Spielers abfragen
+        int anzahlLeben = GO.GetComponent<Spieler>().leben;
 
-            lebensAnzeige.GetComponent<Text>().color = farben[i];
-            i++;
-            //			SpielerListe.Add(p);
-            //			SpielerStatusAktualisieren();
-        }
+        Debug.Log("SpielerStatusAktualisieren mit go: " + GO.GetComponent<Spieler>().spielerID +
+            " leben:" + anzahlLeben + " Spieler Pos: " + i);
+        // Anzahl Leben in die entsprechende Anzeige einfuegen
+        GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
+        lebensAnzeige.SetActive(true);
+        lebensAnzeige.GetComponent<Text>().text = "";
+        lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
+        ////Anzeige mit strichen anstelle der Zahl (geht max bis 3)
+        //for (int j = 0; j < anzahlLeben; j++) 
+        //    {
+        //        lebensAnzeige.GetComponent<Text>().text += "I";
+        //    }
 
-        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
-        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
+        lebensAnzeige.GetComponent<Text>().color = farben[i];
+        //i++;
+        //			SpielerListe.Add(p);
+        //			SpielerStatusAktualisieren();
     }
+
+    //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
+    //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
+}
 

@@ -4,12 +4,13 @@ using UnityEngine.Networking;
 
 public class Spieler : NetworkBehaviour {
 
-	[SyncVar]
-	//public int moveX = 0;
-	//public int moveY = 0;
-	public int leben = 3;
+	//[SyncVar]
+    //public int moveX = 0;
+    //public int moveY = 0;
+    public int leben { get; set; }
     public int StartPos;
     public Vector3 spawn;
+    public string spielerID;
 	//public float moveSpeed = 0.2f;
 
 	//[SyncVar]
@@ -18,7 +19,9 @@ public class Spieler : NetworkBehaviour {
 	void Start()
 	{
  		DontDestroyOnLoad(gameObject);
-	}
+        leben = 4;
+        spielerID = this.netId.ToString();
+    }
 
 
 
@@ -33,8 +36,8 @@ public class Spieler : NetworkBehaviour {
 		base.OnStartLocalPlayer ();
 		Debug.Log ("Spieler-Nr.:" + this.netId);
 		Debug.Log ("This: " + this + " This.getType(): " + this.GetType());
-		
-		Debug.Log (GameObject.FindGameObjectWithTag("Spielelogik"));
+        spielerID = this.netId.ToString();
+        Debug.Log (GameObject.FindGameObjectWithTag("Spielelogik"));
 	}
 		
 //	[ClientRpc]

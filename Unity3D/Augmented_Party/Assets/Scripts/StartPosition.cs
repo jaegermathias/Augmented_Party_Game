@@ -88,6 +88,6 @@ public class StartPosition : MonoBehaviour
         (gameObject.GetComponent(typeof(Collider)) as Collider).enabled = false;
         //Destroy (marker.transform.parent.gameObject);
 
-        Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
+        //Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren(); //(--) nicht sicher warum von Nöten
     }
 }
