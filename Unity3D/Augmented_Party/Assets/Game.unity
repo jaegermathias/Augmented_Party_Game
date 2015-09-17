@@ -725,7 +725,7 @@ GameObject:
   - 114: {fileID: 516432238}
   - 114: {fileID: 516432237}
   m_Layer: 5
-  m_Name: Spieler1
+  m_Name: SpielerStatus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - 114: {fileID: 840831499}
   - 114: {fileID: 840831498}
   m_Layer: 5
-  m_Name: Spieler4
+  m_Name: SpielerStatus4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2371,7 +2371,7 @@ GameObject:
   - 114: {fileID: 1668777804}
   - 114: {fileID: 1668777803}
   m_Layer: 5
-  m_Name: Spieler3
+  m_Name: SpielerStatus3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2751,7 +2751,7 @@ GameObject:
   - 114: {fileID: 2128052962}
   - 114: {fileID: 2128052961}
   m_Layer: 5
-  m_Name: Spieler2
+  m_Name: SpielerStatus2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

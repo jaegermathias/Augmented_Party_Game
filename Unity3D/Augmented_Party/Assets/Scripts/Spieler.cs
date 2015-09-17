@@ -7,8 +7,8 @@ public class Spieler : NetworkBehaviour {
 	//[SyncVar]
     //public int moveX = 0;
     //public int moveY = 0;
-    public int leben { get; set; }
-    public int StartPos;
+	public int spielerLeben;
+    public int spielerStartpos;
     public Vector3 spawn;
     public string spielerID;
 	//public float moveSpeed = 0.2f;
@@ -19,11 +19,16 @@ public class Spieler : NetworkBehaviour {
 	void Start()
 	{
  		DontDestroyOnLoad(gameObject);
-        leben = 4;
+        this.spielerLeben = 4;
         spielerID = this.netId.ToString();
     }
 
-
+	public void spielerLebenAktualisieren()
+	{
+		this.spielerLeben--;
+		GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
+		Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
+	}
 
 	public override void OnStartClient()
 	{
@@ -37,7 +42,6 @@ public class Spieler : NetworkBehaviour {
 		Debug.Log ("Spieler-Nr.:" + this.netId);
 		Debug.Log ("This: " + this + " This.getType(): " + this.GetType());
         spielerID = this.netId.ToString();
-        Debug.Log (GameObject.FindGameObjectWithTag("Spielelogik"));
 	}
 		
 //	[ClientRpc]

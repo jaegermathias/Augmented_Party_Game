@@ -42,6 +42,8 @@ public class Spielelogik : NetworkBehaviour
         foreach (GameObject p in spielerTags)
         {
             SpielerListe.Add(p);
+			int statusPosition = this.GetComponent<SpielerStatus>().SpielerStatusSammlung.Length;
+			this.GetComponent<SpielerStatus>().SpielerStatusSammlung[statusPosition] = p;
             // Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
             if (this.spielerStatus.GetComponent<SpielerStatus>())
             {
@@ -73,14 +75,14 @@ public class Spielelogik : NetworkBehaviour
         {
 
             // Anzahl der Leben des entsprechenden Spielers abfragen
-            int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().leben;
-            Debug.Log("Anzahl Leben : " + anzahlLeben);
+            int anzahlLeben = SpielerObjekt.GetComponent<Spieler>().spielerLeben;
+            Debug.Log("HAAAAAAAAAAAAAAAAAAAAAllllloooo Anzahl Leben : " + anzahlLeben);
 
             // Anzahl Leben in die entsprechende Anzeige einfuegen
             GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
             lebensAnzeige.SetActive(true);
-            lebensAnzeige.GetComponent<Text>().text = "";
-            lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
+			lebensAnzeige.GetComponent<Text>().text = "" + anzahlLeben;
+            //lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
             ////Anzeige mit strichen anstelle der Zahl (geht max bis 3)
             //for (int j = 0; j < anzahlLeben; j++)
             //{
@@ -100,11 +102,11 @@ public class Spielelogik : NetworkBehaviour
     public void SpielerStatusAktualisieren(GameObject GO)
     {
         //StartPosition des Spielers
-        int i = GO.GetComponent<Spieler>().StartPos;
+        int i = GO.GetComponent<Spieler>().spielerStartpos;
 
 
         // Anzahl der Leben des entsprechenden Spielers abfragen
-        int anzahlLeben = GO.GetComponent<Spieler>().leben;
+        int anzahlLeben = GO.GetComponent<Spieler>().spielerLeben;
 
         Debug.Log("SpielerStatusAktualisieren mit go: " + GO.GetComponent<Spieler>().spielerID +
             " leben:" + anzahlLeben + " Spieler Pos: " + i);
