@@ -1921,9 +1921,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpielerListe: []
   spielerStatus: {fileID: 22307416, guid: 084d6045b949b3145a0c3a8083517736, type: 2}
+  spielAktiv: 1
   siegermeldungKomponenten:
   - {fileID: 31619208}
   - {fileID: 1459445839}
+  btnTexture: {fileID: 2800000, guid: 120485f3752e6b248a2d05a1835c6f20, type: 3}
 --- !u!114 &1428829306
 MonoBehaviour:
   m_ObjectHideFlags: 0
