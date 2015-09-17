@@ -19,14 +19,14 @@ public class Spieler : NetworkBehaviour {
 	void Start()
 	{
  		DontDestroyOnLoad(gameObject);
-        this.spielerLeben = 4;
+        this.spielerLeben = 1;
         spielerID = this.netId.ToString();
     }
 
 	public void spielerLebenAktualisieren()
 	{
-		this.spielerLeben--;
 		GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
+		this.spielerLeben--;
 		Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
 	}
 

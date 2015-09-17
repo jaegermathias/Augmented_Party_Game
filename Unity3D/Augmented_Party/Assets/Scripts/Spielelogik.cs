@@ -12,6 +12,9 @@ public class Spielelogik : NetworkBehaviour
 
     public Canvas spielerStatus;
 
+	public bool spielAktiv = true;
+	public GameObject[] siegermeldungKomponenten;
+
     // Blau RGB: 51 105 232 Normalisiert: 
     private static Color blau = new Color(0.2F, 0.042F, 0.910F);
     //Rot RGB: 213 15 37 Normalisiert: 
@@ -91,43 +94,25 @@ public class Spielelogik : NetworkBehaviour
 
             lebensAnzeige.GetComponent<Text>().color = farben[i];
             i++;
-            //			SpielerListe.Add(p);
-            //			SpielerStatusAktualisieren();
         }
-
-        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
-        //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
     }
 
-    public void SpielerStatusAktualisieren(GameObject GO)
-    {
-        //StartPosition des Spielers
-        int i = GO.GetComponent<Spieler>().spielerStartpos;
-
-
-        // Anzahl der Leben des entsprechenden Spielers abfragen
-        int anzahlLeben = GO.GetComponent<Spieler>().spielerLeben;
-
-        Debug.Log("SpielerStatusAktualisieren mit go: " + GO.GetComponent<Spieler>().spielerID +
-            " leben:" + anzahlLeben + " Spieler Pos: " + i);
-        // Anzahl Leben in die entsprechende Anzeige einfuegen
-        GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
-        lebensAnzeige.SetActive(true);
-        lebensAnzeige.GetComponent<Text>().text = "";
-        lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
-        ////Anzeige mit strichen anstelle der Zahl (geht max bis 3)
-        //for (int j = 0; j < anzahlLeben; j++) 
-        //    {
-        //        lebensAnzeige.GetComponent<Text>().text += "I";
-        //    }
-
-        lebensAnzeige.GetComponent<Text>().color = farben[i];
-        //i++;
-        //			SpielerListe.Add(p);
-        //			SpielerStatusAktualisieren();
-    }
-
-    //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), score.ToString());
-    //GUI.Box(Rect(Screen.width*0.5,Screen.height*0.5,100,25), "blllaaaaaa");
+	public void siegerErmittlung(){
+		int aktiveSpieler = 0;
+		foreach (GameObject Spieler in SpielerListe) {
+			Debug.Log(Spieler.GetComponent<Spieler>().spielerLeben);
+			if (Spieler.GetComponent<Spieler>().spielerLeben > 0)
+			{
+				aktiveSpieler++;
+			}
+		}
+		Debug.Log("Sieg? ... Zahl der Spieler im Spiel:" + aktiveSpieler);
+		if (aktiveSpieler == 1) {
+			foreach(GameObject t in siegermeldungKomponenten) {
+				t.SetActive(true);
+			}
+			this.spielAktiv = false;
+		}
+	}
 }
 

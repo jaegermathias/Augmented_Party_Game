@@ -29,7 +29,7 @@ public class Respawn : MonoBehaviour
 
             GameObject car = other.transform.parent.gameObject.transform.parent.gameObject;
             Debug.Log("Runtergéfallen ist: "+car.GetComponent<Spieler>().spielerStartpos);
-            if (leben > 0 && objektTag == "Player")
+            if (leben > 1 && objektTag == "Player")
             {
                 car.transform.position = car.GetComponent<Spieler>().spawn;
 
@@ -40,14 +40,14 @@ public class Respawn : MonoBehaviour
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Blaues Autoo Leben: "+leben );
-					car.GetComponent<Spieler>().spielerLebenAktualisieren();
+						//car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
                     case 2:
                         car.transform.rotation = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Rot Autoo Leben: " + leben);
-					car.GetComponent<Spieler>().spielerLebenAktualisieren();
+					//car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
 
                     case 3:
@@ -55,7 +55,7 @@ public class Respawn : MonoBehaviour
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Gelb Autoo Leben: " + leben);
-					car.GetComponent<Spieler>().spielerLebenAktualisieren();
+					//car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
 
                     case 4:
@@ -63,22 +63,27 @@ public class Respawn : MonoBehaviour
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         Debug.Log("grün Autoo Leben: " + leben);
-					car.GetComponent<Spieler>().spielerLebenAktualisieren();
+
                         break;
 
                     default:
                         break;
                 }
 
-				GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
-				Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
+				//GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
+				//Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
                 //car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 //car.GetComponent<Spieler>().leben--;
             }
-            else
+			else if(objektTag == "Player")
             {
-                Debug.Log("Keines davon");
-				car.GetComponent<Spieler>().spielerLeben--;
+				GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
+				if(Spielelogik.GetComponent<Spielelogik>().spielAktiv == true){
+//                Debug.Log("Spiel fertig?");
+					car.GetComponent<Spieler>().spielerLebenAktualisieren();
+					Spielelogik.GetComponent<Spielelogik>().siegerErmittlung();
+				}
+//				//car.GetComponent<Spieler>().spielerLeben--;
             }
         }
         catch (NullReferenceException ex)

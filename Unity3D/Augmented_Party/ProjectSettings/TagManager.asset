@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spielelogik
   - TrackingLost
+  - Siegermeldung
   layers:
   - Default
   - TransparentFX
