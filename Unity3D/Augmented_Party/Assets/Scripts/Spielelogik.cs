@@ -12,8 +12,8 @@ public class Spielelogik : NetworkBehaviour
 
     public Canvas spielerStatus;
 
-	public bool spielAktiv = true;
-	public GameObject[] siegermeldungKomponenten;
+    public bool spielAktiv = true;
+    public GameObject[] siegermeldungKomponenten;
 
     // Blau RGB: 51 105 232 Normalisiert: 
     private static Color blau = new Color(0.2F, 0.042F, 0.910F);
@@ -45,8 +45,8 @@ public class Spielelogik : NetworkBehaviour
         foreach (GameObject p in spielerTags)
         {
             SpielerListe.Add(p);
-			int statusPosition = this.GetComponent<SpielerStatus>().SpielerStatusSammlung.Length;
-			this.GetComponent<SpielerStatus>().SpielerStatusSammlung[statusPosition] = p;
+            int statusPosition = this.GetComponent<SpielerStatus>().SpielerStatusSammlung.Length;
+            this.GetComponent<SpielerStatus>().SpielerStatusSammlung[statusPosition] = p;
             // Abfragen ob die Leiste fuer die Spieler-Leben vorhanden
             if (this.spielerStatus.GetComponent<SpielerStatus>())
             {
@@ -84,7 +84,7 @@ public class Spielelogik : NetworkBehaviour
             // Anzahl Leben in die entsprechende Anzeige einfuegen
             GameObject lebensAnzeige = this.GetComponent<SpielerStatus>().SpielerStatusSammlung[i];
             lebensAnzeige.SetActive(true);
-			lebensAnzeige.GetComponent<Text>().text = "" + anzahlLeben;
+            lebensAnzeige.GetComponent<Text>().text = "" + anzahlLeben;
             //lebensAnzeige.GetComponent<Text>().text = anzahlLeben.ToString();
             ////Anzeige mit strichen anstelle der Zahl (geht max bis 3)
             //for (int j = 0; j < anzahlLeben; j++)
@@ -97,22 +97,49 @@ public class Spielelogik : NetworkBehaviour
         }
     }
 
-	public void siegerErmittlung(){
-		int aktiveSpieler = 0;
-		foreach (GameObject Spieler in SpielerListe) {
-			Debug.Log(Spieler.GetComponent<Spieler>().spielerLeben);
-			if (Spieler.GetComponent<Spieler>().spielerLeben > 0)
-			{
-				aktiveSpieler++;
-			}
-		}
-		Debug.Log("Sieg? ... Zahl der Spieler im Spiel:" + aktiveSpieler);
-		if (aktiveSpieler == 1) {
-			foreach(GameObject t in siegermeldungKomponenten) {
-				t.SetActive(true);
-			}
-			this.spielAktiv = false;
-		}
-	}
+    public void siegerErmittlung()
+    {
+        int aktiveSpieler = 0;
+        int farbenNr = 0;
+        foreach (GameObject Spieler in SpielerListe)
+        {
+            Debug.Log(Spieler.GetComponent<Spieler>().spielerLeben);
+            if (Spieler.GetComponent<Spieler>().spielerLeben > 0)
+            {
+                aktiveSpieler++;
+                farbenNr = Spieler.GetComponent<Spieler>().spielerStartpos;
+            }
+        }
+        Debug.Log("Sieg? ... Zahl der Spieler im Spiel:" + aktiveSpieler);
+        if (aktiveSpieler == 1)
+        {
+            Debug.Log("Farbe Nummer: " + farbenNr);
+            siegermeldungKomponenten[0].GetComponent<Text>().color = farben[farbenNr-1];
+            siegermeldungKomponenten[1].GetComponent<Text>().color = farben[farbenNr-1];
+
+            switch (farbenNr)
+            {
+                case 1:
+                    siegermeldungKomponenten[1].GetComponent<Text>().text = "Congrats! Blue";
+                    break;
+                case 2:
+                    siegermeldungKomponenten[1].GetComponent<Text>().text = "Congrats! Rot";
+                    break;
+                case 3:
+                    siegermeldungKomponenten[1].GetComponent<Text>().text = "Congrats! Gelb";
+                    break;
+                case 4:
+                    siegermeldungKomponenten[1].GetComponent<Text>().text = "Congrats! Grün";
+                    break;
+                default:
+                    break;
+            }
+            foreach (GameObject t in siegermeldungKomponenten)
+            {
+                t.SetActive(true);
+            }
+            this.spielAktiv = false;
+        }
+    }
 }
 
