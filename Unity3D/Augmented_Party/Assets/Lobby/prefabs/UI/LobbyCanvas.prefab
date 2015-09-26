@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: .576470613, b: .23137255, a: 1}
+  m_Color: {r: .866666675, g: .866666675, b: .866666675, a: .862745106}
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 67b8a8430b32c04489788395fbda13b2, type: 3}
     m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Add Player
+  m_Text: Add another car
 --- !u!114 &11490716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,7 +308,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -3, y: 619}
+  m_AnchoredPosition: {x: -3, y: 500}
   m_SizeDelta: {x: 640, y: 120}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22484248
