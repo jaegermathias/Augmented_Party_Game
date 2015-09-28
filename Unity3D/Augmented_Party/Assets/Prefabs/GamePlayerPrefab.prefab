@@ -1789,7 +1789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c8519798a1dbd44a5183f7fed046cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spielerLeben: 0
+  spielerLeben: 1
   spielerStartpos: 0
   spawn: {x: 0, y: 0, z: 0}
   spielerID: 
@@ -3113,6 +3113,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: spielerLeben
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -346,38 +346,9 @@ Prefab:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_CustomConfig
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_ConnectionConfig.m_MinUpdateTimeout
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_ConnectionConfig.m_ConnectTimeout
-      value: 4000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_ConnectionConfig.m_DisconnectTimeout
-      value: 4000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_ConnectionConfig.m_PingTimeout
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_UseSimulator
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: m_GamePlayerPrefab
+      propertyPath: m_SpawnPrefabs.Array.data[0]
       value: 
       objectReference: {fileID: 123050, guid: 620b30be837a93a42b0a06dab5a347b0, type: 2}
-    - target: {fileID: 11475862, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
-      propertyPath: lobbyCanvas.prefab
-      value: 
-      objectReference: {fileID: 22318024, guid: 4770253c3e4695648a457977e87a191d,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c01bd19ad84a51e439a479f654b1923c, type: 2}
   m_IsPrefabParent: 0

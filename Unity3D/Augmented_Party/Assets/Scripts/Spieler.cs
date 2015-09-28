@@ -20,7 +20,7 @@ public class Spieler : NetworkBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        this.spielerLeben = 1;
+        this.spielerLeben = 3;
         spielerID = this.netId.ToString();
     }
 

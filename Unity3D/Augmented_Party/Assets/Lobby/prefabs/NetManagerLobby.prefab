@@ -62,7 +62,7 @@ MonoBehaviour:
   m_SendPeerInfo: 0
   m_MaxDelay: .00999999978
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 123050, guid: 620b30be837a93a42b0a06dab5a347b0, type: 2}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 1
   m_OfflineScene: Lobby
@@ -105,12 +105,12 @@ MonoBehaviour:
   m_MaxPlayersPerConnection: 4
   m_LobbyPlayerPrefab: {fileID: 11474776, guid: 62c72f652ef24ed49b8a640aff045011,
     type: 2}
-  m_GamePlayerPrefab: {fileID: 145526, guid: c7a7cfae19c454d4c8747f525a1a0044, type: 2}
+  m_GamePlayerPrefab: {fileID: 123050, guid: 620b30be837a93a42b0a06dab5a347b0, type: 2}
   m_LobbyScene: Lobby
   m_PlayScene: Game
   lobbySlots: []
   lobbyCanvas:
-    prefab: {fileID: 22332996, guid: fd6642779f39a8249b5fa74264923204, type: 2}
+    prefab: {fileID: 22318024, guid: 4770253c3e4695648a457977e87a191d, type: 2}
   offlineCanvas:
     prefab: {fileID: 22347380, guid: b2d20cd35cfbfb94aae6bb35f426aefa, type: 2}
   onlineCanvas:

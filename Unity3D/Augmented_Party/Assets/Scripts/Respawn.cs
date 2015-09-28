@@ -40,14 +40,14 @@ public class Respawn : MonoBehaviour
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Blaues Autoo Leben: "+leben );
-						//car.GetComponent<Spieler>().spielerLebenAktualisieren();
+						car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
                     case 2:
                         car.transform.rotation = new Quaternion(0.0f, 1.0f, 0.0f, 0.0f);
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Rot Autoo Leben: " + leben);
-					//car.GetComponent<Spieler>().spielerLebenAktualisieren();
+					car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
 
                     case 3:
@@ -55,7 +55,7 @@ public class Respawn : MonoBehaviour
                         car.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                         car.GetComponent<Rigidbody>().velocity = Vector3.zero;
                         //Debug.Log("Gelb Autoo Leben: " + leben);
-					//car.GetComponent<Spieler>().spielerLebenAktualisieren();
+					car.GetComponent<Spieler>().spielerLebenAktualisieren();
                         break;
 
                     case 4:
