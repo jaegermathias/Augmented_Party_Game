@@ -43,7 +43,7 @@ public class VulcanBehaviour : NetworkBehaviour
 	{
 		// Positionierung einschraenken.
 		Vector3 aktuellePosition = this.GetComponent<Transform> ().position;
-		Vector3 eingeschraenktePosition = new Vector3 (aktuellePosition.x, 7.5f, aktuellePosition.z);
+		Vector3 eingeschraenktePosition = new Vector3 (aktuellePosition.x, 0, aktuellePosition.z);
 		this.GetComponent<Transform> ().position = eingeschraenktePosition;
 		//this.transform.position.y = 0;
 		

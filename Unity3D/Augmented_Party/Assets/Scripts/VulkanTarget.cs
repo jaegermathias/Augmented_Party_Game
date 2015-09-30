@@ -12,7 +12,7 @@ namespace Vuforia
 		#region PUBLIC_MEMBER_VARIABLES
 		// Der Lavaklumpen, der gespawned werden soll1
 		public bool VulkanErkannt = false;
-		public GameObject Vulkan;
+		public GameObject Vulkan = null;
 		#endregion // PUBLIC_MEMBER_VARIABLES		
 		
 		#region PRIVATE_MEMBER_VARIABLES
@@ -32,9 +32,11 @@ namespace Vuforia
 			{
 				mTrackableBehaviour.RegisterTrackableEventHandler(this);
 			}
+
+			Vulkan = this.transform.GetChild (0).gameObject;
 		}
 		#endregion // UNTIY_MONOBEHAVIOUR_METHODS
-		
+
 		
 		
 		#region PUBLIC_METHODS
@@ -93,10 +95,10 @@ namespace Vuforia
 		private void OnTrackingLost()
 		{
 			// Vulkan deaktivieren, falls schon initialisiert
-		if (Vulkan) {
+			if (Vulkan && Vulkan.GetComponentInChildren<VulcanBehaviour> ()) {
 				Debug.Log ("Vulkan verloren.");
 				Vulkan.GetComponentInChildren<VulcanBehaviour> ().erkannt = false;
-}
+		}
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			
