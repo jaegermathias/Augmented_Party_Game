@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
     <Tracking>
+        <CylinderTarget name="Plattform_a01" sideLength="15.200000"/>
+        <CylinderTarget name="Vulcan_a01" sideLength="15.200000"/>
         <ImageTarget name="spawn4" size="7.500000 7.500000"/>
         <ImageTarget name="spawn3" size="7.500000 7.500000"/>
         <ImageTarget name="spawn2" size="7.500000 7.500000"/>
         <ImageTarget name="spawn1" size="7.500000 7.500000"/>
+        <ImageTarget name="WorldCenter_Koffer.Back" size="34.500000 10.500511"/>
+        <ImageTarget name="WorldCenter_Koffer.Front" size="34.500000 10.494958"/>
         <ImageTarget name="WorldCenter_Koffer.Right" size="24.500000 10.498610"/>
         <ImageTarget name="WorldCenter_Koffer.Bottom" size="34.500000 24.504673"/>
-        <ImageTarget name="WorldCenter_Koffer.Back" size="34.500000 10.500511"/>
-        <ImageTarget name="WorldCenter_Koffer.Top" size="34.500000 24.505293"/>
-        <ImageTarget name="WorldCenter_Koffer.Front" size="34.500000 10.494958"/>
         <ImageTarget name="WorldCenter_Koffer.Left" size="24.500000 10.498610"/>
+        <ImageTarget name="WorldCenter_Koffer.Top" size="34.500000 24.505293"/>
         <MultiTarget name="WorldCenter_Koffer">
             <Part name="WorldCenter_Koffer.Left" translation="-17.25 0 0" rotation="AD: 0 1 0 -90"/>
             <Part name="WorldCenter_Koffer.Right" translation="17.25 0 0" rotation="AD: 0 1 0 90"/>
