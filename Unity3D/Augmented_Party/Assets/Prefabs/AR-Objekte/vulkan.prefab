@@ -44,7 +44,7 @@ GameObject:
   - 114: {fileID: 11499802}
   - 114: {fileID: 11404340}
   m_Layer: 0
-  m_Name: Vulkan
+  m_Name: vulkan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
