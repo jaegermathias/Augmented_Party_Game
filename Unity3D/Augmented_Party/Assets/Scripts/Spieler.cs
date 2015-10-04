@@ -24,12 +24,23 @@ public class Spieler : NetworkBehaviour
         spielerID = this.netId.ToString();
     }
 
-    public void spielerLebenAktualisieren()
+    public void spielerLebenReduzieren()
     {
         GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
         if (this.spielerLeben > 0)
         {
             this.spielerLeben--;
+        }
+
+        Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();
+    }
+
+    public void spielerLebenErhoehen()
+    {
+        GameObject Spielelogik = GameObject.FindGameObjectWithTag("Spielelogik");
+        if (this.spielerLeben > 0)
+        {
+            this.spielerLeben++;
         }
 
         Spielelogik.GetComponent<Spielelogik>().SpielerStatusAktualisieren();

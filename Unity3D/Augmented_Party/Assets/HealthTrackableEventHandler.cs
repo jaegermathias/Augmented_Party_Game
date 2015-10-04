@@ -1,4 +1,4 @@
-/*==============================================================================
+﻿/*==============================================================================
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
@@ -11,19 +11,25 @@ namespace Vuforia
     /// <summary>
     /// A custom handler that implements the ITrackableEventHandler interface.
     /// </summary>
-    public class DefaultTrackableEventHandler : MonoBehaviour,
+    public class HealthTrackableEventHandler : MonoBehaviour,
                                                 ITrackableEventHandler
     {
+        #region PUBLIC_MEMBER_VARIABLES
+        public bool HealthErkannt = false;
+        public GameObject Health = null;
+
+        #endregion
+
         #region PRIVATE_MEMBER_VARIABLES
- 
+
         private TrackableBehaviour mTrackableBehaviour;
-    
+
         #endregion // PRIVATE_MEMBER_VARIABLES
 
 
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
-    
+
         void Start()
         {
             mTrackableBehaviour = GetComponent<TrackableBehaviour>();
@@ -31,7 +37,7 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
-            
+            Health = this.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -67,6 +73,10 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
+            // HealthPot aktivieren
+            Debug.Log("HealthMarker erkannnt.");
+            this.transform.GetChild(0).gameObject.GetComponentInChildren<LebensPowerup>().erkannt = true;
+
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
@@ -88,6 +98,13 @@ namespace Vuforia
 
         private void OnTrackingLost()
         {
+            // HealthPot deaktivieren, falls schon initialisiert
+            //if (Health && Health.GetComponentInChildren<LebensPowerup>())
+            {
+                Debug.Log("HealthMarker verloren.");
+                this.transform.GetChild(0).gameObject.GetComponentInChildren<LebensPowerup>().erkannt = false;
+            }
+
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 

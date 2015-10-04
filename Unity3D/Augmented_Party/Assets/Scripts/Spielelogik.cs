@@ -95,6 +95,7 @@ public class Spielelogik : NetworkBehaviour
             lebensAnzeige.GetComponent<Text>().color = farben[i];
             i++;
         }
+        siegerErmittlung();
     }
 
     public void siegerErmittlung()
