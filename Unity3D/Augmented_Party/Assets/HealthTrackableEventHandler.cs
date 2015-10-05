@@ -37,7 +37,7 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
-            Health = this.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject;
+
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -74,8 +74,9 @@ namespace Vuforia
         private void OnTrackingFound()
         {
             // HealthPot aktivieren
-            Debug.Log("HealthMarker erkannnt.");
-            this.transform.GetChild(0).gameObject.GetComponentInChildren<LebensPowerup>().erkannt = true;
+            Health.active = true;
+            this.Health.GetComponentInChildren<LebensPowerup>().erkannt = true;
+            Debug.Log("HealthMarker erkannnt." + this.Health.GetComponentInChildren<LebensPowerup>().erkannt);
 
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -99,12 +100,11 @@ namespace Vuforia
         private void OnTrackingLost()
         {
             // HealthPot deaktivieren, falls schon initialisiert
-            //if (Health && Health.GetComponentInChildren<LebensPowerup>())
+            if (Health)
             {
-                Debug.Log("HealthMarker verloren.");
-                this.transform.GetChild(0).gameObject.GetComponentInChildren<LebensPowerup>().erkannt = false;
+                this.Health.GetComponentInChildren<LebensPowerup>().erkannt = false;
+                Debug.Log("HealthMarker weg." + this.Health.GetComponentInChildren<LebensPowerup>().erkannt);
             }
-
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 

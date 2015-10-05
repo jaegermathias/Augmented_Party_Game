@@ -29,7 +29,8 @@ public class LebensPowerup : MonoBehaviour
      * #DONE -Taucht nach gewisser Zeit auf 
      * #DONE -Random Red or Purple
      * #DONE -Plus leben/Minus Leben
-     * -Netzwerk Sync
+     * -Netzwerk Sync von Farbe und Sichtbar oder nicht
+     * 
      * #DONE -Force Y Höhe
      *          
      */
@@ -38,7 +39,7 @@ public class LebensPowerup : MonoBehaviour
     {
         geschwindigkeit = 5;
         animation = true;
-        erkannt = false;
+        //erkannt = false;
         intervall = 5;
         disableHealth();
     }
