@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using System;
 
 public class LebensPowerup : MonoBehaviour
 {
@@ -39,9 +40,10 @@ public class LebensPowerup : MonoBehaviour
     {
         geschwindigkeit = 5;
         animation = true;
-        //erkannt = false;
+        erkannt = true;
         intervall = 5;
-        disableHealth();
+        //disableHealth();
+        //showKreuz();// Marker-Loser Ansatz
     }
 
     void Update()
@@ -77,7 +79,7 @@ public class LebensPowerup : MonoBehaviour
     void showKreuz()
     {
 
-        rdm = Random.Range(0, 2);
+        rdm = UnityEngine.Random.Range(0, 2);
         Debug.Log("Random Number: " + rdm);
 
         
@@ -100,24 +102,34 @@ public class LebensPowerup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject car = other.transform.parent.gameObject.transform.parent.gameObject;
-        switch (rdm)
-        {
-            case 0: //Red One
-                car.GetComponent<Spieler>().spielerLebenErhoehen();
-               Debug.Log("leben dazu! Jetzt: " + other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Spieler>().spielerLeben);
-               //Objekt kriegt leben dazu
-                break;
-            case 1: //Puple One
-                car.GetComponent<Spieler>().spielerLebenReduzieren();
-                Debug.Log("leben weg! Jetzt: " + other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Spieler>().spielerLeben);
-              //Objekt verliert Leben
-                break;
-            default:
-                Debug.Log("Random ist Doof!");
-                break;
+        try {
+            string objektTag = other.transform.parent.gameObject.transform.parent.gameObject.tag;
+            if (objektTag == "Player")
+            {
+                GameObject car = other.transform.parent.gameObject.transform.parent.gameObject;
+                switch (rdm)
+                {
+                    case 0: //Red One
+                        car.GetComponent<Spieler>().spielerLebenErhoehen();
+                        Debug.Log("leben dazu! Jetzt: " + other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Spieler>().spielerLeben);
+                        //Objekt kriegt leben dazu
+                        break;
+                    case 1: //Puple One
+                        car.GetComponent<Spieler>().spielerLebenReduzieren();
+                        Debug.Log("leben weg! Jetzt: " + other.transform.parent.gameObject.transform.parent.gameObject.GetComponent<Spieler>().spielerLeben);
+                        //Objekt verliert Leben
+                        break;
+                    default:
+                        Debug.Log("Random ist Doof!");
+                        break;
+                }
+                disableHealth();
+            }
         }
-        disableHealth();
+        catch (NullReferenceException ex)
+        {
+            return;
+        }
     }
 
     private void enableHealth()

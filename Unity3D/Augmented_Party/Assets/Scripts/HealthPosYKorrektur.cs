@@ -8,7 +8,7 @@ public class HealthPosYKorrektur : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        hoehePowerup = 12.5f;
+        //hoehePowerup = 12.5f;
     }
 
     // Update is called once per frame
